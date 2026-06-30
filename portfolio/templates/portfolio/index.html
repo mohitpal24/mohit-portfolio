@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 
@@ -429,7 +430,7 @@
                         <!-- Mockup Image Container -->
                         <div class="aspect-video relative overflow-hidden bg-dark">
                             {% if project.image %}
-                            <img src="{{ project.image.url }}" alt="{{ project.title }} Mockup"
+                            <img src="{% static 'images/' %}{{ project.image }}" alt="{{ project.title }} Mockup"
                                 class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105">
                             {% else %}
                             <!-- Fallback Mockup CSS -->
