@@ -111,14 +111,16 @@
             content: "";
             position: absolute;
             inset: 0;
-            background: radial-gradient(500px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255,255,255,.09), transparent 42%);
+            background: radial-gradient(500px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 255, 255, .09), transparent 42%);
             opacity: 0;
             transition: opacity .35s ease;
             pointer-events: none;
             z-index: -1;
         }
 
-        .tech-card:hover::before { opacity: 1; }
+        .tech-card:hover::before {
+            opacity: 1;
+        }
 
         .tech-pill {
             --accent: #f5f5f5;
@@ -127,10 +129,10 @@
             align-items: center;
             gap: .65rem;
             padding: .72rem 1rem;
-            border: 1px solid rgba(136,136,136,.22);
+            border: 1px solid rgba(136, 136, 136, .22);
             border-radius: 999px;
             color: #b4b4b4;
-            background: rgba(13,13,13,.72);
+            background: rgba(13, 13, 13, .72);
             transition: color .3s ease, border-color .3s ease, box-shadow .3s ease, transform .18s ease;
             will-change: transform;
         }
@@ -157,7 +159,9 @@
         }
 
         @media (prefers-reduced-motion: reduce) {
-            .tech-pill { transform: none !important; }
+            .tech-pill {
+                transform: none !important;
+            }
         }
     </style>
 </head>
@@ -203,21 +207,21 @@
 
     </header>
 
-        <div id="mobile-menu" aria-hidden="true"
-            class="fixed inset-0 w-screen h-[100dvh] bg-[#0D0D0D] z-[45] flex flex-col justify-center items-center space-y-8 transition-transform duration-500 transform translate-x-full md:hidden shadow-2xl">
-            <div class="absolute inset-0 bg-[#0D0D0D] -z-10"></div>
-            <a href="#home"
-                class="mobile-nav-link text-2xl uppercase tracking-widest text-[#888888] hover:text-light transition-colors font-medium">Home</a>
-            <a href="#about"
-                class="mobile-nav-link text-2xl uppercase tracking-widest text-[#888888] hover:text-light transition-colors font-medium">About</a>
-            <a href="#services"
-                class="mobile-nav-link text-2xl uppercase tracking-widest text-[#888888] hover:text-light transition-colors font-medium">Tech
-                Stack</a>
-            <a href="#projects"
-                class="mobile-nav-link text-2xl uppercase tracking-widest text-[#888888] hover:text-light transition-colors font-medium">Projects</a>
-            <a href="#contact"
-                class="mobile-nav-link text-2xl uppercase tracking-widest text-[#888888] hover:text-light transition-colors font-medium">Contact</a>
-        </div>
+    <div id="mobile-menu" aria-hidden="true"
+        class="fixed inset-0 w-screen h-[100dvh] bg-[#0D0D0D] z-[45] flex flex-col justify-center items-center space-y-8 transition-transform duration-500 transform translate-x-full md:hidden shadow-2xl">
+        <div class="absolute inset-0 bg-[#0D0D0D] -z-10"></div>
+        <a href="#home"
+            class="mobile-nav-link text-2xl uppercase tracking-widest text-[#888888] hover:text-light transition-colors font-medium">Home</a>
+        <a href="#about"
+            class="mobile-nav-link text-2xl uppercase tracking-widest text-[#888888] hover:text-light transition-colors font-medium">About</a>
+        <a href="#services"
+            class="mobile-nav-link text-2xl uppercase tracking-widest text-[#888888] hover:text-light transition-colors font-medium">Tech
+            Stack</a>
+        <a href="#projects"
+            class="mobile-nav-link text-2xl uppercase tracking-widest text-[#888888] hover:text-light transition-colors font-medium">Projects</a>
+        <a href="#contact"
+            class="mobile-nav-link text-2xl uppercase tracking-widest text-[#888888] hover:text-light transition-colors font-medium">Contact</a>
+    </div>
 
     <main class="relative z-10">
 
@@ -260,8 +264,10 @@
                         <a href="/media/documents/Mohit_Pal_Resume.pdf" download="Mohit_Pal_Resume.pdf"
                             class="group inline-flex items-center gap-2 px-5 py-3 border border-[#888888]/30 rounded-full text-sm tracking-wider uppercase font-semibold text-[#b5b5b5] hover:text-light hover:border-light/70 hover:bg-light/5 transition-all duration-300">
                             <span>Résumé</span>
-                            <svg class="w-4 h-4 group-hover:translate-y-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14" />
+                            <svg class="w-4 h-4 group-hover:translate-y-0.5 transition-transform" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14" />
                             </svg>
                         </a>
                     </div>
@@ -340,19 +346,24 @@
         <section id="services" class="py-24 max-w-7xl mx-auto px-6 reveal">
             <div class="grid lg:grid-cols-12 gap-8 lg:gap-16 mb-14 items-end">
                 <div class="lg:col-span-8">
-                    <div class="text-[#888888] text-xs uppercase tracking-[.28em] font-semibold mb-4">/ MY DIGITAL TOOLBOX</div>
-                    <h2 class="font-heading font-black text-4xl sm:text-5xl lg:text-7xl uppercase text-light tracking-[-.045em] leading-[.92]">
+                    <div class="text-[#888888] text-xs uppercase tracking-[.28em] font-semibold mb-4">/ MY DIGITAL
+                        TOOLBOX</div>
+                    <h2
+                        class="font-heading font-black text-4xl sm:text-5xl lg:text-7xl uppercase text-light tracking-[-.045em] leading-[.92]">
                         The tools behind<br><span class="text-[#666]">the things I ship.</span>
                     </h2>
                 </div>
                 <p class="lg:col-span-4 text-[#888888] text-sm md:text-base leading-relaxed lg:pb-1">
-                    A practical stack chosen for speed, reliability, and clean products—not because a framework happened to be trending.
+                    A practical stack chosen for speed, reliability, and clean products—not because a framework happened
+                    to be trending.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 border-t border-l border-[#888888]/20 rounded-2xl overflow-hidden">
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 border-t border-l border-[#888888]/20 rounded-2xl overflow-hidden">
                 <article class="tech-card p-7 sm:p-10 border-r border-b border-[#888888]/20 min-h-[260px]">
-                    <div class="flex justify-between items-start mb-10"><span class="font-mono text-xs text-[#666]">01 / LOGIC</span><span class="text-2xl">⌘</span></div>
+                    <div class="flex justify-between items-start mb-10"><span class="font-mono text-xs text-[#666]">01 /
+                            LOGIC</span><span class="text-2xl">⌘</span></div>
                     <h3 class="font-heading text-2xl font-bold mb-5">Languages</h3>
                     <div class="flex flex-wrap gap-2.5 font-mono text-xs sm:text-sm">
                         <button type="button" class="tech-pill" style="--accent:#3776ab">Python</button>
@@ -363,7 +374,8 @@
                     </div>
                 </article>
                 <article class="tech-card p-7 sm:p-10 border-r border-b border-[#888888]/20 min-h-[260px]">
-                    <div class="flex justify-between items-start mb-10"><span class="font-mono text-xs text-[#666]">02 / BUILD</span><span class="text-2xl">◈</span></div>
+                    <div class="flex justify-between items-start mb-10"><span class="font-mono text-xs text-[#666]">02 /
+                            BUILD</span><span class="text-2xl">◈</span></div>
                     <h3 class="font-heading text-2xl font-bold mb-5">Web & Frameworks</h3>
                     <div class="flex flex-wrap gap-2.5 font-mono text-xs sm:text-sm">
                         <button type="button" class="tech-pill" style="--accent:#44b78b">Django</button>
@@ -376,7 +388,8 @@
                     </div>
                 </article>
                 <article class="tech-card p-7 sm:p-10 border-r border-b border-[#888888]/20 min-h-[260px]">
-                    <div class="flex justify-between items-start mb-10"><span class="font-mono text-xs text-[#666]">03 / STORE</span><span class="text-2xl">◎</span></div>
+                    <div class="flex justify-between items-start mb-10"><span class="font-mono text-xs text-[#666]">03 /
+                            STORE</span><span class="text-2xl">◎</span></div>
                     <h3 class="font-heading text-2xl font-bold mb-5">Database Technologies</h3>
                     <div class="flex flex-wrap gap-2.5 font-mono text-xs sm:text-sm">
                         <button type="button" class="tech-pill" style="--accent:#47a248">MongoDB</button>
@@ -386,7 +399,8 @@
                     </div>
                 </article>
                 <article class="tech-card p-7 sm:p-10 border-r border-b border-[#888888]/20 min-h-[260px]">
-                    <div class="flex justify-between items-start mb-10"><span class="font-mono text-xs text-[#666]">04 / SHIP</span><span class="text-2xl">↗</span></div>
+                    <div class="flex justify-between items-start mb-10"><span class="font-mono text-xs text-[#666]">04 /
+                            SHIP</span><span class="text-2xl">↗</span></div>
                     <h3 class="font-heading text-2xl font-bold mb-5">Tools & DevOps</h3>
                     <div class="flex flex-wrap gap-2.5 font-mono text-xs sm:text-sm">
                         <button type="button" class="tech-pill" style="--accent:#f05032">Git</button>
@@ -869,7 +883,8 @@
             <div class="p-4 border-b border-[#888888]/10 flex items-center justify-between bg-[#121212]/80">
                 <div class="flex items-center space-x-3">
                     <div class="w-8 h-8 rounded-full overflow-hidden border border-[#888888]/30 bg-dark">
-                        <img src="/media/mohit_pal.jpeg" alt="Mohit Pal" class="w-full h-full object-cover">
+                        <img src="/static/images/projects/mohit_pal.jpeg" alt="Mohit Pal"
+                            class="w-full h-full object-cover">
                     </div>
                     <div>
                         <div class="text-xs font-semibold text-light leading-none">Mohit's Assistant</div>
@@ -894,7 +909,8 @@
                 <div class="flex flex-col space-y-1 max-w-[85%]">
                     <div
                         class="bg-[#121212] border border-[#888888]/10 text-light rounded-2xl rounded-tl-none p-3 leading-relaxed">
-                        Hey! I’m PAL, Mohit’s AI portfolio assistant. Ask naturally about his work, skills, experience, or whether he fits your role.
+                        Hey! I’m PAL, Mohit’s AI portfolio assistant. Ask naturally about his work, skills, experience,
+                        or whether he fits your role.
                     </div>
                     <span class="text-[10px] text-[#888888] pl-2 font-mono">Assistant</span>
                 </div>
