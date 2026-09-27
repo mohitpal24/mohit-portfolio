@@ -123,7 +123,7 @@ class ChatView(View):
             if error_text.startswith('GROQ_HTTP_401'):
                 error_message = 'Groq rejected the API key. Check that GROQ_API_KEY is current in Render.'
             elif error_text.startswith('GROQ_HTTP_403'):
-                error_message = 'This Groq API key does not have access to the selected model.'
+                error_message = 'Your Groq organization blocks this model. Enable it in Groq Console > Settings > Limits; keep using the same API key.'
             elif error_text.startswith(('GROQ_HTTP_400', 'GROQ_HTTP_404')):
                 error_message = 'Groq rejected the model request. Check the model configuration in Render logs.'
             elif error_text.startswith('GROQ_HTTP_429'):
