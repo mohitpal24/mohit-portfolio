@@ -95,7 +95,7 @@ PROJECTS
         except (json.JSONDecodeError, AttributeError):
             compact_body = " ".join(raw_error.split())[:180]
             detail = compact_body or f"HTTP {exc.code}"
-        raise AIServiceError(f"AI_REQUEST_FAILED: {detail}") from exc
+        raise AIServiceError(f"GROQ_HTTP_{exc.code}: {detail}") from exc
     except urllib.error.URLError as exc:
         raise AIServiceError(f"AI_REQUEST_FAILED: connection error ({exc.reason})") from exc
     except (KeyError, IndexError, json.JSONDecodeError) as exc:

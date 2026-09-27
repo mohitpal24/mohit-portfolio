@@ -148,9 +148,9 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Portfolio AI (Groq by default; any OpenAI-compatible endpoint can be used)
+# Portfolio AI: use the Groq API with the Groq API key configured in the host environment.
 AI_API_KEY = os.environ.get('GROQ_API_KEY') or os.environ.get('AI_API_KEY', '')
-AI_BASE_URL = os.environ.get('AI_BASE_URL', 'https://api.groq.com/openai/v1')
+AI_BASE_URL = 'https://api.groq.com/openai/v1'
 AI_MODEL = 'openai/gpt-oss-20b'
 
 # Contact notifications. In development, messages are printed to the terminal when

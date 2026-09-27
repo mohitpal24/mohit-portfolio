@@ -119,7 +119,18 @@ class ChatView(View):
                 }, status=503)
             logger.warning("Portfolio AI request failed: %s", exc)
             error_message = 'The assistant is taking a short break. Please try again in a moment.'
+            error_text = str(exc)
+            if error_text.startswith('GROQ_HTTP_401'):
+                error_message = 'Groq rejected the API key. Check that GROQ_API_KEY is current in Render.'
+            elif error_text.startswith('GROQ_HTTP_403'):
+                error_message = 'This Groq API key does not have access to the selected model.'
+            elif error_text.startswith(('GROQ_HTTP_400', 'GROQ_HTTP_404')):
+                error_message = 'Groq rejected the model request. Check the model configuration in Render logs.'
+            elif error_text.startswith('GROQ_HTTP_429'):
+                error_message = 'Groq rate limit reached. Please wait a moment and try again.'
+            elif error_text.startswith('AI_REQUEST_FAILED: connection error'):
+                error_message = 'The site could not connect to Groq. Please try again shortly.'
             if settings.DEBUG:
-                error_message = f"Local AI error: {str(exc).removeprefix('AI_REQUEST_FAILED: ')}"
+                error_message = f"Local AI error: {error_text}"
             return JsonResponse({'error': error_message}, status=502)
         return JsonResponse({'answer': answer})
