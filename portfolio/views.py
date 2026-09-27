@@ -48,7 +48,7 @@ class ContactSubmitView(View):
                 logger.exception("Contact message saved but notification email failed")
                 failure_msg = (
                     "Your message was saved, but the email notification could not be delivered. "
-                    "Please email Mohit directly at mohitmusic2429@gmail.com."
+                    "Please email Mohit directly at mohiittpal@gmail.com."
                 )
                 if is_ajax:
                     return JsonResponse({'success': False, 'saved': True, 'message': failure_msg}, status=502)

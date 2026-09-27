@@ -6,8 +6,8 @@ from django.conf import settings
 
 
 PORTFOLIO_CONTEXT = """
-Mohit Pal is a software engineer and B.Tech Computer Science (AI & ML) student at
-KCC Institute of Technology & Management, graduating in 2026. He focuses on Python,
+Mohit Pal is a Computer Science and Engineering graduate specializing in AI & ML
+from Dr. A. P. J. Abdul Kalam Technical University, Greater Noida (2026). He focuses on Python,
 Django, scalable backends, REST APIs, databases, and polished full-stack products.
 He completed a Developer Trainee program at HCL Tech from January to March 2025,
 working with Java, object-oriented design, software architecture, and AI-assisted development.
@@ -18,7 +18,7 @@ Skills:
 - Databases: MongoDB, MySQL, PostgreSQL, pgvector
 - Tools: Git, GitHub, VS Code, Android Studio
 
-Contact: mohitmusic2429@gmail.com, GitHub github.com/mohitpal24.
+Contact: mohiittpal@gmail.com, GitHub github.com/mohitpal24.
 Mohit is open to suitable software engineering roles, internships, and collaborations.
 """.strip()
 

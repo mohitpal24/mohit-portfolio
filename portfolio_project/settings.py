@@ -151,7 +151,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Portfolio AI (Groq by default; any OpenAI-compatible endpoint can be used)
 AI_API_KEY = os.environ.get('GROQ_API_KEY') or os.environ.get('AI_API_KEY', '')
 AI_BASE_URL = os.environ.get('AI_BASE_URL', 'https://api.groq.com/openai/v1')
-AI_MODEL = os.environ.get('AI_MODEL', 'llama-3.1-8b-instant')
+AI_MODEL = 'openai/gpt-oss-20b'
 
 # Contact notifications. In development, messages are printed to the terminal when
 # SMTP is not configured; they are always persisted in ContactMessage first.
@@ -166,4 +166,4 @@ EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', '')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', '')
 EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS', 'True').lower() == 'true'
 DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL', EMAIL_HOST_USER or 'portfolio@localhost')
-CONTACT_NOTIFICATION_EMAIL = os.environ.get('CONTACT_NOTIFICATION_EMAIL', 'mohitmusic2429@gmail.com')
+CONTACT_NOTIFICATION_EMAIL = os.environ.get('CONTACT_NOTIFICATION_EMAIL', 'mohiittpal@gmail.com')
