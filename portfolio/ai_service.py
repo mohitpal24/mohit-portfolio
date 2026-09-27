@@ -60,8 +60,9 @@ PROJECTS
     payload = json.dumps({
         "model": settings.AI_MODEL,
         "messages": messages,
-        "temperature": 0.35,
-        "max_completion_tokens": 260,
+        "temperature": 1,
+        "reasoning_effort": "low",
+        "max_completion_tokens": 700,
     }).encode("utf-8")
     request = urllib.request.Request(
         f"{settings.AI_BASE_URL.rstrip('/')}/chat/completions",

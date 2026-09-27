@@ -117,6 +117,7 @@ class ChatView(View):
                     'error': 'The AI assistant is being configured. Meanwhile, ask me about Mohit’s skills, projects, experience, or contact details.',
                     'code': 'not_configured',
                 }, status=503)
+            logger.warning("Portfolio AI request failed: %s", exc)
             error_message = 'The assistant is taking a short break. Please try again in a moment.'
             if settings.DEBUG:
                 error_message = f"Local AI error: {str(exc).removeprefix('AI_REQUEST_FAILED: ')}"
